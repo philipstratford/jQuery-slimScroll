@@ -92,6 +92,11 @@
 
         // used in event handlers and for better minification
         var me = $(this);
+        
+        //Set height of scrollable div to the height specified in the style of the div.
+        if (me.height) {
+            o.height = me.height;
+        };
 
         // ensure we are not binding it again
         if (me.parent().hasClass(o.wrapperClass))
